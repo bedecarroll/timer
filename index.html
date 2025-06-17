@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- TEMPLATE HEADER - CUSTOMIZE AS NEEDED -->
+        <header>
+            <div class="header-bar">
+                <h1>Timer App</h1>
+                <!-- KEEP: Theme toggle button - provides dark/light mode functionality -->
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-describedby="theme-help" title="Toggle Dark Mode">&#9728;&#65039;</button>
+            </div>
+            <div id="theme-help" class="sr-only">Switch between light and dark theme</div>
+            <p>A simple timer application with pomodoro preset and visual feedback</p>
+        </header>
+        
+        <main>
+            <!-- Timer Display -->
+            <div class="timer-display">
+                <div id="time-display" class="time-display">25:00</div>
+                <div id="timer-status" class="timer-status">Ready</div>
+            </div>
+            
+            <!-- Time Input Section -->
+            <div class="input-section">
+                <label for="minutes-input">Minutes:</label>
+                <input type="number" id="minutes-input" min="0" max="999" value="25" aria-describedby="minutes-help">
+                <div id="minutes-help" class="sr-only">Set timer duration in minutes</div>
+                
+                <label for="seconds-input">Seconds:</label>
+                <input type="number" id="seconds-input" min="0" max="59" value="0" aria-describedby="seconds-help">
+                <div id="seconds-help" class="sr-only">Set timer duration in seconds</div>
+            </div>
+            
+            <!-- Preset Buttons -->
+            <div class="preset-section">
+                <button id="pomodoro-btn" class="preset-btn">Pomodoro (25:00)</button>
+                <button id="short-break-btn" class="preset-btn">Short Break (5:00)</button>
+                <button id="long-break-btn" class="preset-btn">Long Break (15:00)</button>
+            </div>
+            
+            <!-- Timer Controls -->
+            <div class="controls-section">
+                <button id="start-btn" class="control-btn start-btn">Start</button>
+                <button id="pause-btn" class="control-btn pause-btn" disabled>Pause</button>
+                <button id="reset-btn" class="control-btn reset-btn">Reset</button>
+            </div>
+        </main>
+    </div>
+    
+    <!-- EXTERNAL LIBRARIES: Add any CDN links here before main.js -->
+    <!-- Example: <script src="https://cdn.jsdelivr.net/npm/your-library"></script> -->
+    
+    <!-- KEEP: Main application script - compiled from src/ directory -->
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
