@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "src/main.ts",
   "devDependencies": {
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "description": "A simple timer application with pomodoro preset and visual feedback",
   "scripts": {
